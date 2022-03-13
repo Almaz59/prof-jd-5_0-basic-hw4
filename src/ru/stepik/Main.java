@@ -4,15 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
         // Задача 1:
-        int a = 1;
-        while (a <= 10) {
-            System.out.print(a + " ");
-            a++;
+        int a = 0;
+        while (a < 10) {
+            System.out.print(++a + " ");
         }
         System.out.println("");
 
-        for (int i = 10; i >= 1; i--) {
-            System.out.print(i + " ");
+        for (; a > 0; a--) {
+            System.out.print(a + " ");
         }
         System.out.println("");
 
@@ -29,5 +28,30 @@ public class Main {
             if (i >= pastYear)
                 System.out.println(i + " ");
         }
+
+        // Задача 4:
+        for (int j = 1; j <= 30; j++) {
+            if (j % 3 == 0 && j % 5 == 0) {
+                System.out.println(j + ": ping pong");
+            } else if (j % 3 == 0) {
+                System.out.println(j + ": ping");
+            } else if (j % 5 == 0) {
+                System.out.println(j + ": pong");
+            } else
+                System.out.println(j + ":");
+        }
+
+        // Задача 5:
+        int a1 = 0;
+        int b1 = 1;
+        System.out.print(a1 + " " + b1 + " ");
+        for (int i = 2; i < 10; i++) {
+            int c = a1 + b1;
+            a1 = b1;
+            b1 = c;
+            System.out.print(c + " ");
+        }
     }
 }
+
+
